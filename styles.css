@@ -1,0 +1,216 @@
+:root {
+ --Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size:13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: var(--Light-grayish-blue);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container .first {
+    background: url(./images/bg-pattern-quotation.svg) no-repeat var(--Moderate-violet);
+    background-position: 90% 0%;
+    background-size: 120px;
+}
+
+.container article {
+    padding: 2rem 2rem;
+    border-radius: 10px;
+}
+
+.container article section img{
+    width: 40px;
+    border: 2px solid hsla(0, 0%, 100%, 70%);
+    float:left;
+    border-radius: 50%;
+}
+
+.container article section h4{
+    font-size: 1rem;
+    font-weight: 600;
+    display:flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    
+}
+
+.container article section small {
+    font-size: 0.9rem;
+    display: flex;
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+
+
+.container article h3 {
+    padding-top: 1rem;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    padding-right: 2rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+}
+
+.container article p {
+    line-height: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1rem 0 0;
+}
+
+.container .first h3 {
+    color: var(--White);
+}
+
+.container .first section h4 {
+    color: var(--White);   
+}
+
+.container .first section small {
+    color: hsla(0, 0%, 100%, 50%);
+}
+
+.container .first p {
+    color: hsla(0, 0%, 100%, 70%);
+
+}
+
+.container .second {
+    background: var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+
+.container .second small {
+    color: hsla(0, 0%, 100%, 50%);
+}
+
+.container .second h3 {
+    color: var(--White);
+}
+
+.container .second p {
+    color: hsla(0, 0%, 100%, 70%);
+}
+
+
+.container .third  {
+    background: var(--White);
+}
+
+.container .third h4 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.container .third small {
+    color: hsla(219, 29%, 14%, 50%);
+}
+
+.container .third h3 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.container .third p {
+    color: hsla(217, 19%, 35%, 70%);
+}
+
+.container .fourth {
+    background: var(--Very-dark-blackish-blue);
+    color: var(--White);
+}
+
+.container .fourth section small {
+    color: hsla(0, 0%, 81%, 50%);
+}
+
+.container .fourth p {
+    color: hsla(0, 0%, 81%, 70%);
+}
+
+.container .fifth  {
+    background: var(--White);
+}
+
+.container .fifth section small {
+    color: hsla(219, 29%, 14%, 50%);
+}
+
+
+.container .fifth p {
+    color: hsla(219, 29%, 14%, 70%);
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width:650px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .container {
+        max-width: 90%;
+        max-height: 60%;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container .first {
+        grid-column: span 2;
+    }
+
+    .container .fifth {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .container .fourth {
+        grid-column: span 2;
+    }
+
+    .container article p {
+        padding: 1rem 0 0 0;
+    }
+}
